@@ -277,6 +277,9 @@ src/Makefile
 data/Doxyfile
 data/Makefile
 po/Makefile
+win32/Makefile
+win32/config.h
+win32/gwhere.nsi
 ])
 AC_OUTPUT
 
