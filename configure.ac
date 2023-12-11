@@ -34,6 +34,10 @@ dnl Checks for libraries.
 dnl =====================
 AC_CHECK_LIB([z], [zlibVersion], , AC_MSG_ERROR(Cannot find zlib))
 
+dnl needed for msvcrt build
+AC_CHECK_LIB(regex,regexec,[LINK_REGEX=-lregex])
+AC_SUBST(LINK_REGEX)
+
 dnl Checks functions
 dnl ==============
 AC_FUNC_FNMATCH
